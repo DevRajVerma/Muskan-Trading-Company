@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muskan Trading Company</title>
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body>
+    <header class="head">
+        <div class="logo">
+            <img src="/images/logo.png" alt="Company Logo">
+        </div>
+        <div class="company-name">
+            <h1>Muskan Trading Company</h1>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="input-section">
+            <h2>Add New Entry</h2>
+            <form id="inputForm">
+                <div class="form-group">
+                    <label for="millName">Mill Name:</label>
+                    <input type="text" id="millName" name="millName" required>
+                </div>
+                <div class="form-group">
+                    <label for="storeName">Store Name:</label>
+                    <input type="text" id="storeName" name="storeName" required>
+                </div>
+                <div class="form-group">
+                    <label for="item">Item:</label>
+                    <input type="text" id="item" name="item" required>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <button type="button" onclick="addEntry()">Add Entry</button>
+            </form>
+        </section>
+
+        <aside class="ledger">
+            <h2>Registors</h2>
+            <div class="PR"><a href="PR.html">1. Purchase Registor</a></div>
+            <div class="SR"><a href="SR.html">2. Sauda Registor</a></div>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <!-- You can add footer content here -->
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- You can add additional scripts here -->
+</body>
+
+</html>

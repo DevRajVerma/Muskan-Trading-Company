@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muskan Trading Company</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="head">
+        <h1 style="font-size: 50px;">Muskan Trading Company</h1>
+        <img src="IMAGE/GANESHLOGO.png">
+        <div class="datetime" id="dateTime" style="padding-left: 30%;margin: auto;font-size: 25px;color: black;">
+        </div>
+    </div>
+    <h1 style="margin: auto; margin-left: 40% ; font-size:  50px;">Purchase Registor</h1>
+    <a href="Home.html" style="margin: auto;">Go back to Home </a>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muskan Trading Company</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="head">
+        <h1 style="font-size: 50px;">Muskan Trading Company</h1>
+        <img src="IMAGE/GANESHLOGO.png">
+        <div class="datetime" id="dateTime" style="padding-left: 30%;margin: auto;font-size: 25px;color: black;">
+        </div>
+    </div>
+    <h1 style="margin: auto; margin-left: 40% ; font-size:  50px;">Purchase Registor</h1>
+    <a href="Home.html" style="margin: auto;">Go back to Home </a>
+    
+    <div style="margin: 20px;">
+        <table id="millsTable" border="1" style="width: 100%; margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th>Mills</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Initial rows can be added here if needed -->
+            </tbody>
+        </table>
+        <button onclick="addRow()">Add New Row</button>
+    </div>
+    
+    <script>
+        function addRow() {
+            const table = document.getElementById('millsTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+            const cell = newRow.insertCell(0);
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.name = 'millName';
+            cell.appendChild(input);
+        }
+    </script>
+</body>
+</html>

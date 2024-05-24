@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+
+.head {
+    display: flex;
+    background-color: #cd4fff;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    /* border-radius: 10%; */
+
+}
+
+
+.head div datetime{
+    padding-left: 120%;
+}
+.head img {
+    width: 130px;
+    height: 130px;
+    padding-left: 10%;
+}
+.ledger{
+  /* display: flex; */
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  margin: auto;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.header {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+}
+
+.company-name h1 {
+    font-size: 24px;
+    color: #333; /* Dark gray text */
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.input-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue button color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.ledger {
+    flex: 0 0 300px; /* Fixed width sidebar */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+.ledger h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.ledger a {
+    display: block;
+    margin-bottom: 10px;
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.ledger a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+.footer {
+    background-color: #333; /* Dark gray footer background */
+    color: #fff; /* White text color */
+    padding: 20px;
+    text-align: center;
+}
