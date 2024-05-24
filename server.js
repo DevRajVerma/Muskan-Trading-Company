@@ -9,6 +9,16 @@ const PORT = process.env.PORT || 3000; //set the port for your server
 var path = require('path');
 
 
+//for posting the data from html pages to server
+var http = require('http');
+var bodyParser = require('body-parser');
+var server = http.createServer(app);
+
+
+//using the bodyParser
+app.use(bodyParser.urlencoded({ extended : false }));
+
+
 
 
 //Set EJS as the view engine
@@ -25,17 +35,34 @@ app.set("views", path.join(__dirname, "views"));
 //Middleware for parsing JSON data
 app.use(express.json());
 
-//Define routes
-app.get('/hello', (req,res) => {
-    res.send('Hello World');
-});
+//Making the models of database
 
-//Defining a route to render your html file
+
+//Connecting the database
+const ConnectDB = require("./db");
+const { log } = require("console");
+ConnectDB();
+
+//Define routes
+
+//defining a route to render your index file (home page)
 
 app.get('/', (req,res) => {
     //Render the html file using res.render()
     res.render('index');
 });
+
+
+//defining a route to send the home page form data to server
+app.post ("/api/signup", (req, res) => {
+
+    const { millName, storeName, item, price, quantity, date } = req.body;
+
+    console.log(req.body);
+
+
+    res.send("Hello Gays");
+    });
 
 //Defining a route to render your html file
  //Start server

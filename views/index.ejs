@@ -22,7 +22,7 @@
     <main class="content">
         <section class="input-section">
             <h2>Add New Entry</h2>
-            <form id="inputForm">
+            <form id="inputForm" action="/api/signup" method="POST">
                 <div class="form-group">
                     <label for="millName">Mill Name:</label>
                     <input type="text" id="millName" name="millName" required>
@@ -47,7 +47,7 @@
                     <label for="date">Date:</label>
                     <input type="date" id="date" name="date" required>
                 </div>
-                <button type="button" onclick="addEntry()">Add Entry</button>
+                <button type="submit" onclick="addEntry()">Add Entry</button>
             </form>
         </section>
 

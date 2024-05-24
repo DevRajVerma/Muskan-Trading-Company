@@ -136,3 +136,22 @@ button:hover {
     padding: 20px;
     text-align: center;
 }
+
+
+/* Add this CSS to your styles.css file */
+
+/* Reduce spacing between form groups */
+.form-group {
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+/* Reduce spacing between labels and inputs */
+.form-group label {
+    display: block;
+    margin-bottom: 5px; /* Adjust as needed */
+}
+
+.form-group input {
+    width: calc(100% - 100px); /* Adjust as needed */
+    padding: 8px; /* Adjust as needed */
+}
