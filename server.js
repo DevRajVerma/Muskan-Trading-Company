@@ -1,7 +1,8 @@
 
 //import required modules
+const TransactionDetail = require('./models/Transaction.models.js')
 const express = require('express');
-const app = express(); 
+const app = express();
 const PORT = process.env.PORT || 3000;
 require('dotenv').config(); //set the port for your server  
 
@@ -17,7 +18,7 @@ var server = http.createServer(app);
 
 
 //using the bodyParser
-app.use(bodyParser.urlencoded({ extended : false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 
 
@@ -48,26 +49,26 @@ connectDB();
 
 //defining a route to render your index file (home page)
 
-app.get('/', (req,res) => {
+app.get('/', (req, res) => {
     //Render the html file using res.render()
     res.render('index');
 });
 
 
 //defining a route to send the home page form data to server
-app.post ("/api/signup", (req, res) => {
+app.post("/api/signup", async (req, res) => {
 
-    const { millName, storeName, item, price, quantity, date } = req.body;
+    const { date, ...tdetails } = req.body;
+    const result = await TransactionDetail.create(tdetails)
+    console.log(result);
+    res.send("SUCCEED")
 
-    console.log(req.body);
-
-
-    res.send("Hello Gays");
-    });
+    console.log(tdetails);
+});
 
 //Defining a route to render your html file
- //Start server
-app.listen(PORT , () => {
+//Start server
+app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
