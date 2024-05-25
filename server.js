@@ -2,7 +2,8 @@
 //import required modules
 const express = require('express');
 const app = express(); 
-const PORT = process.env.PORT || 3000; //set the port for your server  
+const PORT = process.env.PORT || 3000;
+require('dotenv').config(); //set the port for your server  
 
 
 //for passing the path
@@ -39,9 +40,9 @@ app.use(express.json());
 
 
 //Connecting the database
-const ConnectDB = require("./db");
+const connectDB = require("./db");
 const { log } = require("console");
-ConnectDB();
+connectDB();
 
 //Define routes
 
