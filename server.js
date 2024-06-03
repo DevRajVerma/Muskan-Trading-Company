@@ -11,7 +11,7 @@ require('dotenv').config(); //set the port for your server
 var path = require('path');
 
 
-//for posting the data from html pages to server
+//for posting the data from html pages to server using http
 var http = require('http');
 var bodyParser = require('body-parser');
 var server = http.createServer(app);
@@ -42,7 +42,7 @@ app.use(express.json());
 
 //Connecting the database
 const connectDB = require("./db");
-const { log } = require("console");
+// const { log } = require("console");
 connectDB();
 
 //Define routes
@@ -67,6 +67,28 @@ app.post("/api/signup", async (req, res) => {
 });
 
 //Defining a route to render your html file
+
+
+//Defining a route to get the data from database
+app.get("/api/purchases", async (req, res) => {
+    try {
+
+        const response = await TransactionDetail.find();
+        // console.log(response);
+        // res.send(response);
+        res.render("purchases",{
+            details: response,
+        });
+    }
+    catch (error) {
+        console.log(error);
+    }
+});
+
+
+
+
+
 //Start server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

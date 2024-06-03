@@ -10,15 +10,9 @@
 </head>
 
 <body>
-    <header class="head">
-        <div class="logo">
-            <img src="/images/logo.png" alt="Company Logo">
-        </div>
-        <div class="company-name">
-            <h1>Muskan Trading Company</h1>
-        </div>
-    </header>
-
+    
+    <header><%- include('partials/header') %></header>
+    
     <main class="content">
         <section class="input-section">
             <h2>Add New Entry</h2>
@@ -53,17 +47,18 @@
 
         <aside class="ledger">
             <h2>Registors</h2>
-            <div class="PR"><a href="PR.html">1. Purchase Registor</a></div>
+            <div class="PR"><a href="api/purchases">1. Purchase Registor</a></div>
             <div class="SR"><a href="SR.html">2. Sauda Registor</a></div>
         </aside>
     </main>
 
-    <footer class="footer">
-        <!-- You can add footer content here -->
-    </footer>
+    <div><%- include('partials/footer') %></div>
 
+    
     <script src="script.js"></script>
     <!-- You can add additional scripts here -->
+
+
 </body>
 
 </html>
