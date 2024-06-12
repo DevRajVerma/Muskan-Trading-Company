@@ -63,7 +63,7 @@ app.post("/api/signup", async (req, res) => {
     console.log(result);
     res.send("SUCCEED")
 
-    console.log(tdetails);
+    // console.log(tdetails); 
 });
 
 //Defining a route to render your html file
